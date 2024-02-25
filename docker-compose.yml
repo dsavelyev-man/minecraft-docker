@@ -8,11 +8,14 @@ services:
     ports:
       - "25565:25565"
     environment:
+      TYPE: "BUKKIT"
       EULA: "TRUE"
       VERSION: 1.20.4
       ONLINE_MODE: false
       SERVER_NAME: "Shadows of Resilience"
-      MOTD: "surviried"
+      MOTD: "Shadows of Resilience - survived in dark world, with more angry animals, and impossible problems"
       ICON: "https://opengameart.org/sites/default/files/heart%20pixel%20art%20254x254.png"
     volumes:
       - ./data:/data
+      - /var/www/html/dynmapgcp:/web
+    restart: unless-stopped
