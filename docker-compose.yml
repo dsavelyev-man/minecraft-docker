@@ -7,6 +7,7 @@ services:
     stdin_open: true
     ports:
       - "25565:25565"
+      - "8123:8123"
     environment:
       COPY_PLUGINS_SRC: ./plugins
       TYPE: "BUKKIT"
